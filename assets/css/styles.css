@@ -6,10 +6,19 @@
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Sono', Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Sono', Arial, sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Sono', Arial, sans-serif;
+    font-weight: 300;
 }
 
 header {
