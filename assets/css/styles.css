@@ -1,8 +1,8 @@
 /* assets/css/styles.css */
 :root {
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --accent-color: #4caf50;
+    --background-color: #925a94;
+    --text-color: #363636;
+    --accent-color: #e9e349;
 }
 
 body {
@@ -42,4 +42,26 @@ footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--accent-color);
+}
+
+/* Remove any pseudo-elements that add dashes */
+.social-media a::before,
+.social-media a::after {
+    content: none;
+}
+
+/* Ensure proper spacing without dashes */
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+/* Optional: Style the social buttons */
+.social-button {
+    transition: transform 0.2s;
+}
+
+.social-button:hover {
+    transform: scale(1.2);
 }

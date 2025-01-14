@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header: Contains logo and navigation bar -->
     <header>
+        <div class="logo">
+            <h1>My Logo</h1> <!-- You can replace this with an image logo -->
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,12 +23,31 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section: Contains tagline, image, or animation -->
     <section class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Microscopy | Image Analysis | 3D Design</p>
-        <a href="portfolio.html" class="btn">Explore My Work</a>
+        <div class="hero-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Microscopy | Image Analysis | 3D Design</p>
+            <a href="portfolio.html" class="btn">Explore My Work</a>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/hero-image.jpg" alt="Hero Image"> <!-- Replace with an appropriate hero image -->
+        </div>
     </section>
+
+    <!-- Footer: Contains links to social media and quick navigation -->
     <footer>
+
+        <div class="social-media">
+            <a href="https://github.com/Daniel-Waiger" target="_blank">
+                <i class="fa-brands fa-github fa-fade fa-2xl" style="color: #6e18b4;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-waiger-9433ab15a/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2xl" style="color: #6e18b4;"></i>
+            </a>
+            <!-- Add more social media links here -->
+        </div>
         <p>© 2025 My Portfolio. All Rights Reserved.</p>
     </footer>
 </body>
