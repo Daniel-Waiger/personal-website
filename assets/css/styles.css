@@ -9,6 +9,8 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+    margin-top: 8rem;
+    margin-bottom: 10rem;
 }
 
 h1, h2, h3 {
@@ -26,9 +28,14 @@ p {
 header {
     background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
     background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite; /* Changed from 15s to 10s */
-    padding: 1rem;
+    animation: gradientAnimation 10s ease infinite;
+    padding: 0.5rem 0;
+    text-align: center;
     color: var(--text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 @keyframes gradientAnimation {
@@ -40,6 +47,18 @@ header {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes iconBrightness {
+    0% {
+        filter: brightness(0.5);
+    }
+    50% {
+        filter: brightness(5.0);
+    }
+    100% {
+        filter: brightness(0.5);
     }
 }
 
@@ -71,9 +90,48 @@ nav ul li a:hover {
 footer {
     background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
     background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite; /* Changed from 15s to 10s */
-    padding: 1rem;
+    animation: gradientAnimation 10s ease infinite;
+    padding: 0.5rem 0;
+    text-align: center;
     color: var(--text-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0.5rem 0;
+}
+
+.social-media a {
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+social-media a:hover {
+    transform: scale(2.0);
+    color: var(--accent-color);
+}
+
+.social-media a i {
+    animation: iconBrightness 10s ease infinite;
+    color: var(--text-color);
+}
+
+.social-media a:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+copyright {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
 }
 
 /* Remove any pseudo-elements that add dashes */
@@ -95,5 +153,5 @@ footer {
 }
 
 .social-button:hover {
-    transform: scale(1.2);
+    transform: scale(1.8);
 }
