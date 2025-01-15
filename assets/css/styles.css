@@ -155,3 +155,150 @@ copyright {
 .social-button:hover {
     transform: scale(1.8);
 }
+
+#portfolio h2 {
+    padding-top: 16px;
+    /* Optional: Additional styling for better alignment */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+/* Ensure header and footer alignment */
+header, footer {
+    /* Existing styles... */
+    left: 0;
+}
+
+.header, footer {
+    /* Ensures no offset */
+    text-align: center;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+    #portfolio h2 {
+        padding-top: 12px;
+        font-size: 1.75rem;
+    }
+}
+
+/* Carousel Container */
+.carousel-container {
+    margin: 3rem 0;
+    position: relative;
+}
+
+.carousel-container h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--accent-color);
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Buttons */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.nav i {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+/* Automatic Sliding Animation */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+/* Apply animation to carousel-track */
+.carousel-track.autoplay {
+    animation: slideAnimation 15s infinite;
+}
+
+/* Pause Animation on Hover */
+.carousel:hover .carousel-track.autoplay {
+    animation-play-state: paused;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .carousel {
+        height: 400px;
+    }
+
+    .carousel-item {
+        min-width: 33.3333%;
+    }
+
+    .carousel-track {
+        width: 300%;
+    }
+
+    .carousel-track.autoplay {
+        animation: slideAnimation 30s infinite;
+    }
+}

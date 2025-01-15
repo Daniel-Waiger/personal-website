@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>SciTech - Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="assets/js/include.js" defer></script>
@@ -13,18 +13,78 @@
     <!-- Header: Contains logo and navigation bar -->
     <section id="portfolio">
         <h2>My Portfolio</h2>
-        <article>
-            <figure>
-                <img src="assets/images/microscopy-sample.jpg" alt="Microscopy Sample">
-                <figcaption>High-resolution microscopy of biological samples</figcaption>
-            </figure>
-        </article>
-        <article>
-            <figure>
-                <iframe src="https://sketchfab.com/models/your-model/embed"></iframe>
-                <figcaption>Interactive 3D model created in Fusion 360</figcaption>
-            </figure>
-        </article>
+
+        <!-- Microscopy Carousel -->
+        <div class="carousel-container">
+            <h3>Microscopy</h3>
+            <div class="carousel" id="microscopy-carousel">
+                <button class="nav prev" onclick="moveSlide('microscopy-carousel', -1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="assets/images/microscopy1.jpg" alt="Microscopy 1">
+                        <p>Description for Microscopy 1</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/microscopy2.jpg" alt="Microscopy 2">
+                        <p>Description for Microscopy 2</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/microscopy3.jpg" alt="Microscopy 3">
+                        <p>Description for Microscopy 3</p>
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+                <button class="nav next" onclick="moveSlide('microscopy-carousel', 1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Image Analysis Carousel -->
+        <div class="carousel-container">
+            <h3>Image Analysis</h3>
+            <div class="carousel" id="image-analysis-carousel">
+                <button class="nav prev" onclick="moveSlide('image-analysis-carousel', -1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="assets/images/image-analysis1.jpg" alt="Image Analysis 1">
+                        <p>Description for Image Analysis 1</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/image-analysis2.jpg" alt="Image Analysis 2">
+                        <p>Description for Image Analysis 2</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/image-analysis3.jpg" alt="Image Analysis 3">
+                        <p>Description for Image Analysis 3</p>
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+                <button class="nav next" onclick="moveSlide('image-analysis-carousel', 1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- 3D Models Carousel -->
+        <div class="carousel-container">
+            <h3>3D Models</h3>
+            <div class="carousel" id="3d-models-carousel">
+                <button class="nav prev" onclick="moveSlide('3d-models-carousel', -1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="assets/images/3d-model1.jpg" alt="3D Model 1">
+                        <p>Description for 3D Model 1</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/3d-model2.jpg" alt="3D Model 2">
+                        <p>Description for 3D Model 2</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/3d-model3.jpg" alt="3D Model 3">
+                        <p>Description for 3D Model 3</p>
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+                <button class="nav next" onclick="moveSlide('3d-models-carousel', 1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
     </section>
     <section id="services">
         <h2>Services</h2>
