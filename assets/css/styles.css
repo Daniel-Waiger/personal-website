@@ -1,24 +1,26 @@
 /* assets/css/styles.css */
 :root {
-    --background-color: #925a94;
-    --text-color: #363636;
-    --accent-color: #e9e349;
+    --background-color: #d4d4d4; /* light gray */
+    --text-color: #333333; /* dark gray */
+    --accent-color: #4a90e2; /* subtle blue */
 }
 
 body {
-    font-family: 'Sono', Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
 h1, h2, h3 {
-    font-family: 'Sono', Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 p {
-    font-family: 'Sono', Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     font-weight: 300;
+    color: var(--text-color);
 }
 
 header {
@@ -40,6 +42,10 @@ nav ul li {
 nav ul li a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
 }
 
 .hero {
