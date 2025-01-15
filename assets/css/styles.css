@@ -36,6 +36,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1000; /* Ensures header is above other elements */
 }
 
 @keyframes gradientAnimation {
@@ -163,6 +164,31 @@ copyright {
     font-size: 2rem;
     color: var(--text-color);
 }
+
+#services h2 {
+    padding-top: 16px;
+    /* Optional: Additional styling for better alignment */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#about h2 {
+    padding-top: 16px;
+    /* Optional: Additional styling for better alignment */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#contact h2 {
+    padding-top: 16px;
+    /* Optional: Additional styling for better alignment */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
 
 /* Ensure header and footer alignment */
 header, footer {
