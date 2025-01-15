@@ -3,6 +3,7 @@
     --background-color: #e6e6e6; /* light gray */
     --text-color: #333333; /* dark gray */
     --accent-color: #4a90e2; /* subtle blue */
+    --logo-padding-left: 3rem; /* Adjust this value as needed */
 }
 
 body {
@@ -29,7 +30,7 @@ header {
     background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     text-align: center;
     color: var(--text-color);
     position: fixed;
@@ -37,6 +38,56 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensures header is above other elements */
+}
+
+/* Add new header container */
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the nav */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Style the logo */
+.logo {
+    position: absolute;
+    left: var(--logo-padding-left);
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 10vh;
+    width: auto;
+}
+
+/* Style the navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the navigation */
+    width: 100%; /* Take full width */
+    gap: 1rem;
+}
+
+/* Update navbar specific styles */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center;
+    gap: 2rem; /* Space between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
 }
 
 @keyframes gradientAnimation {
@@ -71,7 +122,8 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -327,4 +379,20 @@ header, footer {
     .carousel-track.autoplay {
         animation: slideAnimation 30s infinite;
     }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    width: 100%;
+    position: fixed;
+    top: 4rem; /* Adjust based on header height */
+    z-index: 999;
+}
+
+.logo-container img {
+    height: 40px;
+    width: auto;
 }
