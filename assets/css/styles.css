@@ -3,7 +3,7 @@
     --background-color: #e6e6e6; /* light gray */
     --text-color: #333333; /* dark gray */
     --accent-color: #4a90e2; /* subtle blue */
-    --logo-padding-left: 3rem; /* Adjust this value as needed */
+    
 }
 
 body {
@@ -26,11 +26,29 @@ p {
     color: var(--text-color);
 }
 
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    box-sizing: border-box;
+    width: 0%;
+}
+
+.logo-container img {
+    height: 10vh;
+    width: auto;
+}
+
 header {
     background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
-    padding: 2rem 0;
+    padding: 1rem 0;
     text-align: center;
     color: var(--text-color);
     position: fixed;
@@ -60,7 +78,7 @@ header {
 }
 
 .logo img {
-    height: 10vh;
+    height: 8vh;
     width: auto;
 }
 
@@ -76,11 +94,12 @@ nav {
 /* Update navbar specific styles */
 .navbar {
     display: flex;
-    justify-content: center; /* Center the navigation items */
+    justify-content: space-between; /* Center the navigation items */
     align-items: center;
-    gap: 2rem; /* Space between nav items */
-    margin: 0;
+    width: 60%;
     padding: 0;
+    box-sizing: border-box;
+    z-index: 1001;
 }
 
 nav a {
@@ -144,7 +163,7 @@ footer {
     background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     text-align: center;
     color: var(--text-color);
     position: fixed;
@@ -379,20 +398,4 @@ header, footer {
     .carousel-track.autoplay {
         animation: slideAnimation 30s infinite;
     }
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0.5rem;
-    width: 100%;
-    position: fixed;
-    top: 4rem; /* Adjust based on header height */
-    z-index: 999;
-}
-
-.logo-container img {
-    height: 40px;
-    width: auto;
 }
