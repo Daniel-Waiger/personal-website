@@ -1,6 +1,6 @@
 /* assets/css/styles.css */
 :root {
-    --background-color: #d4d4d4; /* light gray */
+    --background-color: #e6e6e6; /* light gray */
     --text-color: #333333; /* dark gray */
     --accent-color: #4a90e2; /* subtle blue */
 }
@@ -24,8 +24,23 @@ p {
 }
 
 header {
-    background-color: var(--accent-color);
+    background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Changed from 15s to 10s */
     padding: 1rem;
+    color: var(--text-color);
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 nav ul {
@@ -54,9 +69,11 @@ nav ul li a:hover {
 }
 
 footer {
-    text-align: center;
+    background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Changed from 15s to 10s */
     padding: 1rem;
-    background-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 /* Remove any pseudo-elements that add dashes */
