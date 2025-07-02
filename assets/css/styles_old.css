@@ -1,0 +1,401 @@
+/* assets/css/styles.css */
+:root {
+    --background-color: #e6e6e6; /* light gray */
+    --text-color: #333333; /* dark gray */
+    --accent-color: #4a90e2; /* subtle blue */
+    
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+p {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    box-sizing: border-box;
+    width: 0%;
+}
+
+.logo-container img {
+    height: 10vh;
+    width: auto;
+}
+
+header {
+    background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures header is above other elements */
+}
+
+/* Add new header container */
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the nav */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Style the logo */
+.logo {
+    position: absolute;
+    left: var(--logo-padding-left);
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 8vh;
+    width: auto;
+}
+
+/* Style the navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the navigation */
+    width: 100%; /* Take full width */
+    gap: 1rem;
+}
+
+/* Update navbar specific styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Center the navigation items */
+    align-items: center;
+    width: 60%;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1001;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes iconBrightness {
+    0% {
+        filter: brightness(0.5);
+    }
+    50% {
+        filter: brightness(5.0);
+    }
+    100% {
+        filter: brightness(0.5);
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+}
+
+footer {
+    background: linear-gradient(-45deg, var(--accent-color), #6cb4ee, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--text-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0.5rem 0;
+}
+
+.social-media a {
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+social-media a:hover {
+    transform: scale(2.0);
+    color: var(--accent-color);
+}
+
+.social-media a i {
+    animation: iconBrightness 10s ease infinite;
+    color: var(--text-color);
+}
+
+.social-media a:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+copyright {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Remove any pseudo-elements that add dashes */
+.social-media a::before,
+.social-media a::after {
+    content: none;
+}
+
+/* Ensure proper spacing without dashes */
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+/* Optional: Style the social buttons */
+.social-button {
+    transition: transform 0.2s;
+}
+
+.social-button:hover {
+    transform: scale(1.8);
+}
+
+#portfolio h2 {
+    padding-top: 16px;
+    /* Optional: Additional styling for better alignment */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#services h2 {
+    padding-top: 16px;
+    /* Optional: Additional styling for better alignment */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#about h2 {
+    padding-top: 16px;
+    /* Optional: Additional styling for better alignment */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#contact h2 {
+    padding-top: 16px;
+    /* Optional: Additional styling for better alignment */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+
+/* Ensure header and footer alignment */
+header, footer {
+    /* Existing styles... */
+    left: 0;
+}
+
+.header, footer {
+    /* Ensures no offset */
+    text-align: center;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+    #portfolio h2 {
+        padding-top: 12px;
+        font-size: 1.75rem;
+    }
+}
+
+/* Carousel Container */
+.carousel-container {
+    margin: 3rem 0;
+    position: relative;
+}
+
+.carousel-container h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--accent-color);
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Buttons */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.nav i {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+/* Automatic Sliding Animation */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+/* Apply animation to carousel-track */
+.carousel-track.autoplay {
+    animation: slideAnimation 15s infinite;
+}
+
+/* Pause Animation on Hover */
+.carousel:hover .carousel-track.autoplay {
+    animation-play-state: paused;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .carousel {
+        height: 400px;
+    }
+
+    .carousel-item {
+        min-width: 33.3333%;
+    }
+
+    .carousel-track {
+        width: 300%;
+    }
+
+    .carousel-track.autoplay {
+        animation: slideAnimation 30s infinite;
+    }
+}

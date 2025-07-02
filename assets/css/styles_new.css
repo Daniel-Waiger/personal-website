@@ -118,14 +118,6 @@ body {
   width: 100%;
 }
 
-.nav-link.active {
-  color: var(--primary-color);
-}
-
-.nav-link.active::after {
-  width: 100%;
-}
-
 /* Theme Toggle Button */
 .theme-toggle {
   background: none;
