@@ -3,6 +3,9 @@ desktop.ini
 Thumbs.db
 *.tmp
 
+# Backup folder
+backup/
+
 # VS Code settings (optional - remove if you want to share settings)
 .vscode/
 
