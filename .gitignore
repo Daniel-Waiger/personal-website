@@ -3,8 +3,10 @@ desktop.ini
 Thumbs.db
 *.tmp
 
-# Backup folder
+# Backup folder and any git repositories within it
 backup/
+backup/**
+**/.git/
 
 # VS Code settings (optional - remove if you want to share settings)
 .vscode/
